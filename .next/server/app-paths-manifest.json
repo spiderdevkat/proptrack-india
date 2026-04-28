@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+  "/api/bhk/route": "app/api/bhk/route.js",
+  "/api/source-quality/route": "app/api/source-quality/route.js",
+  "/api/localities/route": "app/api/localities/route.js",
+  "/api/metrics/route": "app/api/metrics/route.js",
+  "/api/price-changes/route": "app/api/price-changes/route.js"
+}
