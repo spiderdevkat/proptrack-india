@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
       listing_hash, title, city, source, locality, bhk,
       old_price, new_price, delta, pct_change,
       changed_from_date, changed_to_date
-    FROM gold_gold.price_changes
+    FROM gold.price_changes
     ${where}
     ORDER BY abs(delta) DESC
     LIMIT 15

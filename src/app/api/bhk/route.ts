@@ -14,7 +14,7 @@ export async function GET(req: NextRequest) {
       round(avg(max_price))           AS max_price,
       round(avg(avg_price_per_sqft))  AS avg_ppsf,
       sum(total_listings)::int        AS total_listings
-    FROM gold_gold.bhk_price_summary
+    FROM gold.bhk_price_summary
     ${where}
     GROUP BY bhk
     ORDER BY bhk

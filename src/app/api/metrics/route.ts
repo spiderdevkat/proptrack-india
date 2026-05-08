@@ -13,12 +13,12 @@ export async function GET(req: NextRequest) {
       round(avg(avg_price_per_sqft)) AS avg_ppsf,
       sum(total_listings)::int       AS total_listings,
       max(listing_date)              AS last_updated
-    FROM gold_gold.city_price_summary
+    FROM gold.city_price_summary
     ${whereCity}
   `
   const changes = `
     SELECT count(*)::int AS price_changes
-    FROM gold_gold.price_changes
+    FROM gold.price_changes
     ${city && city !== 'all' ? 'WHERE city = $1' : ''}
   `
 

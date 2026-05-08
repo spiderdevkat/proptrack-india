@@ -11,7 +11,7 @@ export async function GET(req: NextRequest) {
       source,
       sum(total_listings)::int        AS total_listings,
       round(avg(price_coverage_pct),1) AS price_coverage_pct
-    FROM gold_gold.source_quality
+    FROM gold.source_quality
     ${where}
     GROUP BY source
     ORDER BY total_listings DESC

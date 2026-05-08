@@ -8,7 +8,7 @@ export async function GET(req: NextRequest) {
 
   const q = `
     SELECT city, locality, listings_count, avg_price, avg_price_per_sqft, min_price, max_price
-    FROM gold_gold.locality_hotspots
+    FROM gold.locality_hotspots
     ${where}
     ORDER BY listings_count DESC
     LIMIT 20
